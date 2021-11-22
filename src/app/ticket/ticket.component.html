@@ -1,0 +1,52 @@
+<div class="main_container">
+   
+    <div class="leftcontainer">
+        <div class="searchbookt">
+            <div class="title">
+              <h1>
+                  Ticket Booking
+              </h1>
+              <img src="../../assets/makemytrip-logo.png">
+  
+            </div><br>
+            
+             <div class="title1">
+                 <label>
+                  From:
+              </label>
+              <select #source id="i1">
+                  <option value="" disabled selected hidden>Location</option>
+                  <option #src>Chennai</option>
+                  <option>Tenkasi</option>
+                  <option>Madurai</option>
+                  <option>Trichy</option>
+                  <option>Salem</option>
+              </select>
+              <br>
+              <label>To:</label>
+              <select #Destinations id="i2">
+                  <option value="" disabled selected hidden> Destination</option>
+                  <option>coimbatore</option>
+                  <option>Tenkasi</option>
+                  <option>Vellore</option>
+                  <option>Salem</option>
+                  <option>Chennai</option>
+              </select>
+             
+              <br>
+              <label>Date:</label>
+              <input type="date" value="{{myDate }}" #jdate>
+              
+            
+           
+            
+            <button value=""    (click)="busDetails(source.value,Destinations.value,jdate.value)">Search </button>
+  
+  
+             </div>
+                    </div>
+    </div>
+  </div>
+   
+   
+    

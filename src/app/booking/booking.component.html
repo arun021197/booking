@@ -1,0 +1,46 @@
+<div class="container">
+    
+    <div class="leftcontainer">
+        <div class="seatlayout">
+            <br><br><br>
+         
+           
+            <img   *ngFor="let seatno of seatarr" [ngClass]="{'green' : toggle[seatno], 'red': !toggle[seatno],'busbboked':seatbooked[seatno]}" (click)="selectSeat(seatno)" src="assets/661611-200.png" style=" width:30px ; height:25px;" ><br>
+            <button  (click)="confirmtkt()"> BookTicket </button>
+        </div>
+       
+       
+    </div>
+    <div class="rightcontainer" >
+        <div class="seatdeatls">
+             <div class="details">
+                <h4>From:<input type="text" value="{{jstart}}" readonly></h4> 
+                 <h4>To:<input type="text" value="{{jend}}" readonly></h4>
+                 <h4>Date:<input type="text" value="{{jdate}}" #passdate readonly></h4>
+                 <h4> Rate:<input type="text" value="1500" readonly></h4>
+            </div> 
+            <form>
+                <h3>Booking Details</h3>
+                <label>Name:</label>
+            <input type="text" id="i1" #passname>
+            <br>
+            <label> Age:</label>
+            <input type="text"  id="i2" #passage>
+            <br>
+            <label>Mobile:</label>
+            <input type="text" maxlength="10"  id="i3" #passno>
+            <br>
+            <label>Selected seat No:</label>
+            <input type=" text"   id="i4" value="{{ss}}" readonly #passseatno>
+            <br>
+            <label>Amount:</label>
+            <input type="text" readonly  id="i5" #passmoney value="{{payment}}" >
+            <br>
+            <button  (click)=passDetails(passname.value,passage.value,passno.value,passseatno.value,passmoney.value,passdate.value)>submit</button>
+            </form>
+            
+            
+            
+        </div>
+    </div>
+</div>
